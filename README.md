@@ -1,5 +1,5 @@
 # TENNISON
-TENNISON is an SDN security framework.
+TENNISON is an SDN security framework which is soon to appear in JSAC SI on SDN Scalabiltiy Issues.
 
 The TENNISON source code is currently undergoing licensing and is expected to be released to the public in the <b> 4th quarter of 2018</b>. 
 
