@@ -29,7 +29,7 @@ overview of the system architecture.
 Please contact Lyndon at l.fawcett1@lancaster.ac.uk about any questions on TENNISON.
 
 # License
-Gaffer is licensed under the Apache 2 license and is covered by [Crown Copyright](https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/).
+TENNISON is licensed under the Apache 2 license and is covered by [Crown Copyright](https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/).
 
 
 # Getting started
