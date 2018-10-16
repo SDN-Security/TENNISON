@@ -33,7 +33,7 @@ To get in contact with the project, please contact Lyndon at: l.fawcett1@lancast
 TENNISON is licensed under the Apache 2 license and is covered by [Crown Copyright](https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/).
 
 # Contributors
-* [Lyndon Fawcett](@https://github.com/lyndon160)
+* [Lyndon Fawcett](https://github.com/lyndon160)
 * [Jamie Bird](https://github.com/biirdy)
 * Sandra Scott-Hayward
 * Andrew Wright
