@@ -27,7 +27,7 @@ TENNISON requires multiple components to function correctly. Below shows an over
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_overview.png?raw=true" alt="TENNISON Overview" />
 </p>
 
-To get in contact with the project, please contact Lyndon at: l.fawcett1@lancaster.ac.uk.
+To get in contact about the project, please contact Lyndon at: l.fawcett1@lancaster.ac.uk.
 
 # License
 TENNISON is licensed under the Apache 2 license and is covered by [Crown Copyright](https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/).
