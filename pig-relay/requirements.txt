@@ -1,4 +1,4 @@
-Flask==0.10.1
+Flask==0.12.3
 Flask_JSONRPC==0.3.1
 requests==2.10.0
 six==1.10.0
