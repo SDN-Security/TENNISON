@@ -4,7 +4,9 @@
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_logo.png?raw=true" alt="TENNISON logo" />
 </p>
 
-TENNISON is a network security framework that harnesses the power of Software Defined Networks. For more details of this work, please see our recently published article in the IEEE Journal on Selected Areas in Communications:
+TENNISON is a novel distributed SDN security framework that combines the efficiency of SDN control and monitoring with the resilience and scalability of a distributed system. TENNISON offers effective and proportionate monitoring and remediation, compatibility with widely-available networking hardware, support for legacy networks, and a modular and extensible distributed design.
+
+For more details of this work, please see our recently published article in the IEEE Journal on Selected Areas in Communications:
 
 ```
 Lyndon Fawcett, Sandra Scott-Hayward, Matthew Broadbent, Andrew Wright, and Nicholas Race
