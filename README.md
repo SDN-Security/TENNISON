@@ -19,7 +19,12 @@ TENNISON's KSPs:
 TENNISON requires multiple components to function correctly. Below shows an
 overview of the system architecture.
 
-![Tennison Logo](imgs/tennison_overview.png)
+
+<p align="center">
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_overview.png?raw=true" alt="TENNISON Overview" />
+</p>
+
+
 
 Please contact Lyndon at l.fawcett1@lancaster.ac.uk about any questions on TENNISON.
 
