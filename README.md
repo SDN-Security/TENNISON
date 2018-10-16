@@ -1,7 +1,8 @@
 
 
-![Tennison Logo](imgs/tennison_logo.png)
-
+<p align="center">
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_logo.png?raw=true" alt="TENNISON logo" />
+</p>
 TENNISON is a network security framework that harnesses Software Defined Networks.
 
 Please contact Lyndon at l.fawcett1@lancaster.ac.uk about any questions on TENNISON.
