@@ -39,7 +39,7 @@ TENNISON is licensed under the Apache 2 license and is covered by [Crown Copyrig
 * Andrew Wright
 * [Matthew Broadbent](https://github.com/broadbent)
 * [Richard Withnell](https://github.com/RichardWithnell)
-* Nicholas Race
+* [Nicholas Race](https://github.com/nickrace)
 
 # Getting started
 **Details on getting started with TENNISON are available in docs/developer_guide.pdf**
