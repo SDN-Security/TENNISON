@@ -13,7 +13,7 @@ IEEE Journal on Selected Areas in Communications (2018).
 ```
 The article is available here: http://eprints.lancs.ac.uk/127188/1/tennison_CA.pdf
 
-TENNISON's offers the following:
+TENNISON offers the following:
 * Extensibility
 * Holistic view
 * Rapid reaction
