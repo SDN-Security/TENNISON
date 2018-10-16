@@ -1,0 +1,6 @@
+Flask==0.10.1
+Flask_JSONRPC==0.3.1
+requests==2.10.0
+six==1.10.0
+gevent==1.1.1
+PyYAML==3.11

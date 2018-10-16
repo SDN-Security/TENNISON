@@ -1,0 +1,6 @@
+curl -H "Content-Type: application/json" -X POST -d "{\"rules\": [\"rule1\", \"rule2\"]}" http://127.0.0.1:8080/snort/rule/delete
+
+curl -H "Content-Type: application/json" -X POST -d "{\"rules\": [\"rule1\", \"rule2\"]}" http://127.0.0.1:8080/snort/rule/add
+
+curl -H "Content-Type: application/json" -X POST http://127.0.0.1:8080/snort/rule/clear
+

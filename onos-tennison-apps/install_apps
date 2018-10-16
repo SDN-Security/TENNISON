@@ -1,0 +1,21 @@
+# Set OC1 to the IP Address of the controller.
+
+onos $OC1 app deactivate org.onosproject.flowmonitor 
+onos $OC1 app deactivate org.onosproject.ipfix 
+onos $OC1 app deactivate org.onosproject.snort 
+onos $OC1 app deactivate org.onosproject.mervynapi  
+
+onos $OC1 app reinstall ipfix/target/onos-app-ipfix-*-SNAPSHOT.oar 
+onos $OC1 app activate org.onosproject.ipfix
+sleep 2
+
+onos $OC1 app reinstall snort/target/onos-app-snort-*-SNAPSHOT.oar 
+onos $OC1 app activate org.onosproject.snort 
+sleep 2
+
+onos $OC1 app reinstall flowmonitor/target/onos-app-flowmonitor-*-SNAPSHOT.oar 
+onos $OC1 app activate org.onosproject.flowmonitor
+sleep 2
+
+onos $OC1 app reinstall mervynapi/target/onos-app-mervynapi-*-SNAPSHOT.oar
+onos $OC1 app activate org.onosproject.mervynapi  

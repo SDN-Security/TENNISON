@@ -1,0 +1,68 @@
+483bd7c was Jamie Bird, 22 hours ago, message: Merged latest GUI
+a97f85f was Jamie Bird, 23 hours ago, message: Fixes to ipfix-portscan and ipfix-ddos
+3e586ec was Jamie Bird, 2 days ago, message: Added DDoS snort threshold
+d655e49 was Jamie Bird, 3 days ago, message: Variable/selective treatment fields.
+15e3427 was Jamie Bird, 3 days ago, message: Logging and config added to NBI
+cf6608b was Jamie Bird, 3 days ago, message: Add pkt field back to snort alerts
+2d694c7 was Jamie Bird, 7 days ago, message: Merge branch 'master' of d31-git.lancaster.ac.uk:mervyn/mervyn
+2ab9f00 was Jamie Bird, 7 days ago, message: 'Resolved' GUI permisson issue.
+b14aa56 was Lyndon, 8 days ago, message: Added IPFIX threshold for 20 -> 5 which mirrors to snort. Snort treatment will then block the flow if intrusion detected
+e889c6e was Jamie Bird, 8 days ago, message: Added gui src
+989f640 was Jamie Bird, 8 days ago, message: Merge branch 'master' of d31-git.lancaster.ac.uk:mervyn/mervyn
+b340990 was Jamie Bird, 8 days ago, message: Gracefull exiting of apps.
+7d137d6 was Lyndon, 8 days ago, message: Removed old TODO messages
+312f882 was Jamie Bird, 9 days ago, message: Added pip requirements.
+d4544b6 was Jamie Bird, 9 days ago, message: Integration of northbound apps. Including the GUI which is hosted.
+bc99918 was Jamie Bird, 10 days ago, message: Refactored snort thresholds to match on alertmsg not the rule. Coord no longer in charge of installing rules.
+7d442d7 was Jamie Bird, 11 days ago, message: Removed excessive printing
+c5c87a4 was Jamie Bird, 11 days ago, message: Extract pkt info from snort alerts to be used as treatment fields. Optional treatment_fields now specified in thresholds.
+b9f38fd was Jamie Bird, 2 weeks ago, message: Default applications loaded and started with mervyn.
+aad4d56 was Jamie Bird, 2 weeks ago, message: Started work on application management in the NBI
+cb1f32e was Jamie Bird, 2 weeks ago, message: Added Access-Control-Allow-Origin for gui
+8fa3dfc was Jamie Bird, 3 weeks ago, message: Fixed protocolIdentifier for sflow
+7448b57 was Jamie Bird, 3 weeks ago, message: Added snort/query to NBI for RT alerts
+c7e8495 was Jamie Bird, 3 weeks ago, message: Implemented avg_bps and avg_pps ipfix metrics
+9995083 was Jamie Bird, 3 weeks ago, message: yaml syntax fix
+73a3fa2 was Jamie Bird, 3 weeks ago, message: Save working version of thresholds to yaml to be reloaded in on restart
+1e6d658 was Jamie Bird, 3 weeks ago, message: Thresholds allow IP ranges for easier white/black list definitinos.
+e51ef4d was Jamie Bird, 4 weeks ago, message: Alternative fix for uint64 issue
+c51a2eb was Andrew Wright, 4 weeks ago, message: MongoDB 8-Byte issue
+7826062 was Andrew Wright, 4 weeks ago, message: Merge branch 'master' of d31-git.lancaster.ac.uk:mervyn/mervyn
+4927b52 was Andrew Wright, 4 weeks ago, message: Update for sFlow message handling format
+7bb7ca9 was Jamie Bird, 4 weeks ago, message: Removed sflow TODOs
+c659100 was Jamie Bird, 4 weeks ago, message: Merge branch 'master' of d31-git.lancaster.ac.uk:mervyn/mervyn
+a41d337 was Jamie Bird, 4 weeks ago, message: ipfix now a treatment. Fix ipfix to onos url protocolIdentifier translation
+a31be1d was Andrew Wright, 4 weeks ago, message: Updates for sFlow alert handling
+67e5ee9 was Andrew Wright, 4 weeks ago, message: Updates for sFlow alert handling
+ebe5439 was Jamie Bird, 4 weeks ago, message: IPFIX times now in ISO 8601
+a9de72f was Jamie Bird, 5 weeks ago, message: IPFIX thresholds complete
+29f1082 was Jamie Bird, 5 weeks ago, message: IPFIX(interfix) now periodic
+3e5590b was Jamie Bird, 6 weeks ago, message: Get switch dpid from ipfix messages
+2d4ce3d was Jamie Bird, 6 weeks ago, message: Coord NBI version 1 tested
+a76ac42 was Jamie Bird, 6 weeks ago, message: Update thresholds done. Remove thresholds done. Better return codes.
+29c72a8 was Jamie Bird, 6 weeks ago, message: IPFIX and snort thresholds now fully dynamic via NBI with required values check
+3b1b3f4 was Jamie Bird, 6 weeks ago, message: Snort query done. Threshold query done. Started work on threshold modification.
+5b3085b was Jamie Bird, 7 weeks ago, message: IPFIX query now timely on a per app basis
+b9e0159 was Jamie Bird, 7 weeks ago, message: Fixed Mac address serialisation in collectors
+e41c3dd was Jamie Bird, 7 weeks ago, message: NBI basics for IPFIX
+e730a74 was Andrew Wright, 7 weeks ago, message: Indentation fixes
+612bde3 was Jamie Bird, 7 weeks ago, message: Started coord NBI outline
+29af1b8 was Jamie Bird, 7 weeks ago, message: Timeouts and connection refused catches added to REST calls to avoid full coord crash.
+f33a8ce was Jamie Bird, 7 weeks ago, message: Alert path fix (temp)
+d69f3ea was Jamie Bird, 8 weeks ago, message: Merge
+ac9a6e8 was Jamie Bird, 8 weeks ago, message: Coord now report to multiple snort instances. Defined in config.yaml
+8e65cb1 was Jamie Bird, 8 weeks ago, message: Started work on snort management
+f55be78 was Jamie Bird, 8 weeks ago, message: Clear existing snort instances from onos on start up. TODO: Configure multiple snort instances in onos from config file
+6f2d439 was Jamie Bird, 9 weeks ago, message: Further TODOs
+5a9ce1a was Lyndon, 4 months ago, message: Added todo notes for integrating sFlowRT into decision making
+88ced10 was Lyndon, 4 months ago, message: Updated readme with collector changes
+3c9aa3c was Lyndon, 4 months ago, message: sFlowRT messages now pushed to ZeroMQ
+2a10ac3 was Lyndon, 4 months ago, message: Created new collector for sFlowRT alerts.
+f63653f was Lyndon John Fawcett, 9 weeks ago, message: Updated todo list
+1775a82 was Bryce Anderson-Cooper, 8 months ago, message: Updated README
+f7c9241 was Bryce Anderson-Cooper, 9 months ago, message: Fixed truffle HTTP POST message
+d6896b3 was Bryce Anderson-Cooper, 9 months ago, message: Fixed dictionary and string comparison
+2630e2f was Bryce Anderson-Cooper, 9 months ago, message: Fixed pyobj parsing and changed listening IP
+785f201 was Bryce Anderson-Cooper, 9 months ago, message: Fixed Snort Rule parsing
+21c0e37 was Bryce Anderson-Cooper, 9 months ago, message: Updated config and thresholds
+dd730f7 was Bryce Anderson-Cooper, 9 months ago, message: Updated Readme

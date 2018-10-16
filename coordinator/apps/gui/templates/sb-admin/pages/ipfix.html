@@ -1,0 +1,237 @@
+{% from "sb-admin/macros/tables/advtable.html" import adv_table %}
+{% from "sb-admin/macros/tables/thrtable.html" import thr_table %}
+{% from "sb-admin/macros/tables/table.html" import table %}
+<!-- extend base layout -->
+{% extends "sb-admin/master.html" %}
+
+{% block body %}
+<div class="row">
+	<div class="col-lg-12">
+
+		<canvas id="myChart"></canvas>
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-lg-12">
+		{{adv_table("Traffic records", ['Date','Type', 'L3 Src', 'L3 Dst', 'L4 Src', 'L4 Dst', 'Delta'], admin_view.table_report, admin_view.prefix_count, admin_view.interfix_count, admin_view.ipfix_count)}}
+	</div>
+</div>
+
+
+<div class="row">
+	<div class="col-lg-12">
+		{{thr_table("Threslds", ['ID','Match fields', 'Priority', 'Subtype', 'Treatment', 'Treatment fields'], admin_view.table_thresholds, admin_view.total_thresholds)}}
+	</div>
+</div>
+
+
+
+{% endblock %}
+
+{% block tail %}
+<!-- DataTables JavaScript -->
+<script src="/dist/js/ChartData.js"></script>
+<script src="../bower_components/chart.js/dist/Chart.min.js"></script>
+<script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"
+  integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+  crossorigin="anonymous"></script>
+
+<script>
+$(document).ready(function() {
+    var di = [];
+    var data =  [{% for row in admin_view.table_report %}
+	       [{% for item in row %}
+		"{{item}}",
+		{% endfor %}],
+		{% endfor %}];
+
+    var dataClass = new ChartData();
+
+    for(var i = 0; i < data.length; i++){
+	
+	obj = dataClass.get(data[i][2]);
+	obj.add(data[i][3], data[i][5]);
+
+
+   }
+
+    var theDict = dataClass.getDict();
+    var dests = [];
+    var vals = [];
+    for(var index in theDict){
+	console.log(index + " : " + theDict[index].getAllDests());
+        dests.push(index);
+        vals.push(theDict[index].getAllDests().length);
+    }
+    
+
+
+
+
+
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: dests,
+        datasets: [{
+            label: '# of Flows',
+            data: vals,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+		'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',	
+		'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',
+		'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+	
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+
+    ctx.onclick = function(evt){
+    	var activePoints = myChart.getElementsAtEvent(evt);
+    	if (activePoints[0]) {
+       		var chartData = activePoints[0]['_chart'].config.data;
+        	var idx = activePoints[0]['_index'];
+
+        	var label = chartData.labels[idx];
+        	var value = chartData.datasets[0].data[idx];
+		
+        	var url = location.protocol + '//' + document.domain + ':' + location.port + "/admin/hosts/" + label;
+        	window.location.href = url;
+        	//alert(url);
+       }
+    };
+
+
+    //var t = $('#ipfix_table').DataTable();
+    var t =$('#ipfix_table').DataTable( {
+    "order": [[ 0, "desc" ]],
+    responsive: true
+    } );
+
+    var t2 =$('#thresholds_table').DataTable( {
+    "order": [[ 0, "desc" ]],
+    responsive: true
+    } );
+    //t.DataTable({responsive: true});
+    //Connect to web socket to add new ipfix entries to table
+    namespace = '';
+    var socket = io.connect(location.protocol + '//' + document.domain + ':' + location.port + namespace);
+
+    socket.on('connect', function() {
+        console.log("Connecting to server");
+        socket.emit('my_event', {data: 'I\'m connected!'});
+    });
+
+    console.log("Document ready");
+    console.log("HELLO");
+
+    socket.on('ipfix_update', function(msg) {
+        console.log("Incoming ".concat(msg.length).concat(" ipfix"))
+				var arrayLength = msg.length;
+				for (var i = 0; i < arrayLength; i++) {
+				    //console.log(msg[i]);
+					var rowNode = t.row.add(msg[i]).draw().node();
+		        		$( rowNode ).css( 'color', 'blue' ).animate( {  color: 'black'}, 7000 );
+					obj = dataClass.get(msg[i][2]);
+                			obj.add(msg[i][3], msg[i][5]); 
+				
+				}
+
+        //Probably need to convert the data into list
+        //t.row.add(['test', 'test', 'test', 'test', 'test', 'test', 'test']);
+	
+
+	dests = [];
+	vals = [];
+
+	
+
+	for(var index in theDict){
+        	console.log(index + " : " + theDict[index].getAllDests());
+        	dests.push(index);
+        	vals.push(theDict[index].getAllDests().length);
+    	}
+	myChart.data.labels = dests;
+	myChart.data.datasets[0].data = vals;        
+	myChart.update();
+
+    });
+
+		socket.on('threshold_update', function(msg) {
+        console.log("Incoming ".concat(msg.length).concat(" thresholds"))
+        //Probably need to convert the data into list
+        //t.row.add(['test', 'test', 'test', 'test', 'test', 'test', 'test']);
+				var arrayLength = msg.length;
+				for (var i = 0; i < arrayLength; i++) {
+	        var rowNode = t2.row.add(msg[i]).draw().node();
+	        $( rowNode ).css( 'color', 'blue' ).animate( {  color: 'black'}, 15000 );
+				}
+
+
+    });
+
+
+});
+</script>
+
+
+
+{% endblock %}

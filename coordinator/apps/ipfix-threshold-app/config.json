@@ -1,0 +1,8 @@
+{
+    "default_app" : false,
+    "type":1,
+    "QueryTime": 2, 
+    "minimuStep": 3, 
+    "margin":3.5,
+    "exponentialSmoothing":0.7
+}

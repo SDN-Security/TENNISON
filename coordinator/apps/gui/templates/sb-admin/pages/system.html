@@ -1,0 +1,32 @@
+<!-- extend base layout -->
+{% extends "sb-admin/master.html" %}
+
+{% from "sb-admin/macros/dashboard/counticon.html" import count_icon %}
+{% from "sb-admin/macros/dashboard/areachart.html" import area_chart %}
+{% from "sb-admin/macros/dashboard/barchart.html" import bar_chart %}
+{% from "sb-admin/macros/dashboard/timeline.html" import timeline %}
+{% from "sb-admin/macros/dashboard/notification.html" import notification %}
+{% from "sb-admin/macros/dashboard/donut.html" import donut %}
+{% from "sb-admin/macros/dashboard/chat.html" import chat %}
+
+{% from "sb-admin/macros/flot/linechart.html" import flot_line_chart %}
+{% from "sb-admin/macros/flot/piechart.html" import flot_pie_chart %}
+{% from "sb-admin/macros/flot/multiaxeschart.html" import flot_multiaxes_chart %}
+{% from "sb-admin/macros/flot/movinglinechart.html" import flot_movingline_chart %}
+{% from "sb-admin/macros/flot/barchart.html" import flot_bar_chart %}
+
+
+
+{% block body %}
+
+
+<div class="progress">
+
+  <div class="progress-bar progress-bar-danger" role="progressbar" style="width:{{admin_view.disk['p_used']}}%">
+    Used space ({{admin_view.disk['used']}}GB)
+  </div>
+  <div class="progress-bar progress-bar-success" role="progressbar" style="width:{{admin_view.disk['p_free']}}%">
+    Free space ({{admin_view.disk['free']}}GB)
+  </div>
+</div>
+{% endblock %}

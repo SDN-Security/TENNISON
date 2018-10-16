@@ -1,0 +1,8 @@
+{
+  "default_app" : true,  
+  "coordinator_ip" : "127.0.0.1",
+  "web_port" : "8089",
+  "coordinator_port" : "2401",
+  "coordinator_poll_time" : 1,
+  "server_to_client_push_time" : 1
+}

@@ -1,0 +1,204 @@
+{% macro app(appid, status, config, footer) %}
+{% if status == "active" %}
+	{% set paneltype = "green" %}
+	{% set footer_label = "Deactivate" %}
+{% else %}
+	{% set paneltype = "default" %}
+	{% set footer_label = "Activate" %}
+{% endif %}
+
+
+
+<style>
+.sliderBox {
+    width: 30%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.sliderbar {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.sliderbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #a80505;
+    cursor: pointer;
+}
+
+.sliderbar::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #10b25b;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+</style>
+
+<div class="panel panel-{{paneltype}}">
+	<div class="panel-heading">
+		{{appid}}
+	</div>
+	<div class="panel-body">
+	  {% if status == "active" %}
+		Status: <span class="label label-success">Running</span>
+		{% endif %}
+	 {% if status == "not_active" %}
+		Status: <span class="label label-default">Stopped</span>
+		{% endif %}
+	 {% if status == "not_installed" %}
+		Status: <span class="label label-default">Not installed</span>
+	{% endif %}
+
+        <h4>Configuration:</h4>
+
+{% for k in config.keys() %}
+
+
+{% set v = config[k] %}
+
+
+
+{% if v is sameas false %}
+<div>
+<b>{{k}}:</b> False
+<br/>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+</label>
+</div>
+{% endif %}
+
+{% if v is sameas true %}
+
+<div>
+<b>{{k}}:</b> True
+<br/>
+<label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider"></span>
+</label>
+</div>
+
+{% endif %}
+
+{% if v is number and v is not sameas false and v is not sameas true %}
+<div class="sliderBox">
+  <p><b>{{k}}:</b> <span id="output{{appid}}{{k}}"></span></p>
+ <input type="range" min="1" max="100" value="{{v}}" class="sliderbar" id="myRange{{appid}}{{k}}">
+</div>
+
+<script>
+var slider{{appid}}{{k}} = document.getElementById("myRange{{appid}}{{k}}");
+var output{{appid}}{{k}} = document.getElementById("output{{appid}}{{k}}");
+output{{appid}}{{k}}.innerHTML = slider.value;
+
+slider{{appid}}{{k}}.oninput = function() {
+  output{{appid}}{{k}}.innerHTML = this.value;
+}
+</script>
+
+
+{% endif %}
+
+{% if v is string %}
+{{v}}
+
+{% endif %}
+
+
+
+{% if v is iterable %}
+<div class="sliderBox">
+<b>{{k}}:</b> <input type="text" value="{{v}}">
+</div>
+
+{% endif %}
+
+{% endfor %}
+
+
+
+        <pre><code>
+        {{config}}
+        </pre></code>
+
+
+
+
+
+	</div>
+	<div class="panel-footer">
+		{% if status == "not_active" %}
+		<button type="button" class="btn btn-danger btn-activate" value="{{appid}}">{{footer_label}}</button>
+		{% endif %}
+
+		{% if status == "active" %}
+		<button type="button" class="btn btn-success btn-deactivate"  value="{{appid}}">{{footer_label}}</button>
+		{% endif %}
+
+
+		{% if footer == "not_installed" %}
+		<button type="button" class="btn btn-default disabled">Not installed</button>
+		{% endif %}
+	</div>
+</div>
+{% endmacro %}

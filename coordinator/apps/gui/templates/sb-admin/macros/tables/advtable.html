@@ -1,0 +1,56 @@
+{% macro adv_table(header, columns, rows, prefix, interfix, ipfix) %}
+{% from "sb-admin/macros/dashboard/counticonsimple.html" import count_icon_simple %}
+<div class="panel panel-default">
+	<div class="panel-heading">
+		{{header}}
+	</div>
+	<!-- /.panel-heading -->
+	<div class="panel-body">
+		<div class="dataTable_wrapper">
+			<table class="table table-striped table-bordered table-hover" id="ipfix_table">
+				<thead>
+					<tr>
+						{% for c in columns %}
+							<th>{{c}}</th>
+						{% endfor %}
+					</tr>
+				</thead>
+				<tbody>
+					{% for r in rows %}
+						{% set c = "odd" %}
+						{% set grade = "gradeX" %}
+						{% if loop.index % 2 == 1 %}
+						{% set c = "even" %}
+						{% endif %}
+						<tr class="{{c}}">
+							{% for d in r %}
+								<td>{{d}}</td>
+							{% endfor %}
+						</tr>
+					{% endfor %}
+
+				</tbody>
+			</table>
+		</div>
+		<!-- /.table-responsive -->
+		<div class="well">
+			<h4>Message type count</h4>
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				{{count_icon_simple(prefix, "# PreFIX", "edit", "#", "PreFIX")}}
+			</div>
+
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				{{count_icon_simple(interfix, "# InterFIX", "edit", "#", "InterFIX")}}
+			</div>
+
+
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				{{count_icon_simple(ipfix, "# IPFIX", "edit", "#", "IPFIX")}}
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</div>
+	<!-- /.panel-body -->
+</div>
+<!-- /.panel -->
+{% endmacro %}

@@ -1,0 +1,44 @@
+{
+  "default_ipfix_0": {
+    "fields": {
+      "sourceIPv4Address": "10.0.0.1"
+    },
+    "metric": "total_bps",
+    "priority": 10,
+    "subtype": "prefix",
+    "threshold": 1,
+    "treatment": "snort_mirror"
+  },
+  "default_ipfix_1": {
+    "fields": {
+      "destinationIPv4Address": "10.0.0.1"
+    },
+    "metric": "total_bps",
+    "priority": 10,
+    "subtype": "prefix",
+    "threshold": 45,
+    "treatment": "snort_mirror"
+  },
+  "default_ipfix_2": {
+    "fields": {
+      "destinationTPv4Address": "8.8.8.8",
+      "sourceIPv4Address": "10.0.0.1"
+    },
+    "metric": "total_bps",
+    "priority": 10,
+    "subtype": "prefix",
+    "threshold": 1,
+    "treatment": "snort_mirror"
+  },
+  "default_ipfix_3": {
+    "fields": {
+      "sourceIPv4Address": "10.0.0.20"
+    },
+    "interval": 10,
+    "metric": "delta_bps",
+    "priority": 10,
+    "subtype": "ipfix",
+    "threshold": 10000,
+    "treatment": "snort_mirror"
+  }
+}

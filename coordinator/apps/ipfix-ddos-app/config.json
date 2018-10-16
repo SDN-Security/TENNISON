@@ -1,0 +1,8 @@
+{
+    "default_app" : false,
+    "ipfix_interval" : 1,
+    "source_count_threshold" : 30,
+    "period" : 60,
+    "whitelist_src" : [],
+    "whitelist_dst" : []
+}

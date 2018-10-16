@@ -1,0 +1,10 @@
+ipfix:
+  - {priority: 10, subtype: prefix, treatment: snort_mirror, fields: {destinationIPv4Address: 10.0.0.5}, treatment_fields: {destinationIPv4Address: 10.0.0.5}}
+  - {priority: 10, subtype: interfix, treatment: snort_mirror, fields: {destinationIPv4Address: 10.0.0.5}, treatment_fields: {destinationIPv4Address: 10.0.0.5}}
+  - {priority: 10, subtype: prefix, treatment: snort_mirror, fields: {destinationTransportPort: 21}, treatment_fields: {protocolIdentifier: tcp, destinationTransportPort: 21}}
+  - {priority: 10, subtype: interfix, treatment: snort_mirror, fields: {destinationTransportPort: 21}, treatment_fields: {protocolIdentifier: tcp, destinationTransportPort: 21}}
+
+snort:
+  - {alertmsg: 'generic UDP alert', priority: 40, treatment: block}
+  - {alertmsg: 'VSFTPD Backdoor', priority: 10, treatment: block, treatment_fields:{sourceIPv4Address: $}}
+  - {alertmsg: 'Possible TCP DoS', priority: 10, treatment: block, treatment_fields:{destinationIPv4Address: $}}

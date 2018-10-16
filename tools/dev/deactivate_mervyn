@@ -1,0 +1,12 @@
+# Set OC1 to the IP Address of the controller.
+
+./onos-app $1 deactivate org.onosproject.ipfix
+sleep 2
+
+./onos-app $1 deactivate org.onosproject.snort 
+sleep 2
+
+./onos-app $1 deactivate org.onosproject.flowmonitor
+sleep 2
+
+./onos-app $1 deactivate org.onosproject.mervynapi  

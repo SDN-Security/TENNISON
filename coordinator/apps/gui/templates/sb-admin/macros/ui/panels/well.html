@@ -1,0 +1,6 @@
+{% macro well(type, title, text) %}
+<div class="well {{type}}">
+	<h4><center>{{title}}</h4></center>
+	<center><a id="{{title}}" href="{{title}}">{{text}}</a></center>
+</div>
+{% endmacro %}

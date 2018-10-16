@@ -1,0 +1,46 @@
+# Set controller_ip to the IP Address of the controller.
+#!/bin/bash
+
+
+echo Installing TENNISON apps for onos instances between 192.168.123.1-$1
+
+ip=1
+base_ip="192.168.123."
+
+while [ $ip -le $1 ]
+do
+
+controller_ip=$base_ip$ip
+
+echo Installing TENNISON apps on $controller_ip
+
+
+onos-app $controller_ip deactivate org.onosproject.flowmonitor 
+onos-app $controller_ip deactivate org.onosproject.ipfix 
+onos-app $controller_ip deactivate org.onosproject.snort 
+onos-app $controller_ip deactivate org.onosproject.mervynapi  
+
+onos-app $controller_ip reinstall ipfix/target/onos-app-ipfix-*-SNAPSHOT.oar 
+sleep 2
+
+onos-app $controller_ip reinstall snort/target/onos-app-snort-*-SNAPSHOT.oar 
+sleep 2
+
+onos-app $controller_ip reinstall flowmonitor/target/onos-app-flowmonitor-*-SNAPSHOT.oar 
+sleep 2
+
+onos-app $controller_ip reinstall mervynapi/target/onos-app-mervynapi-*-SNAPSHOT.oar
+sleep 2
+
+
+
+onos-app $controller_ip activate org.onosproject.ipfix
+onos-app $controller_ip activate org.onosproject.snort 
+onos-app $controller_ip activate org.onosproject.flowmonitor
+onos-app $controller_ip activate org.onosproject.mervynapi  
+
+
+
+let ip=ip+1
+done
+

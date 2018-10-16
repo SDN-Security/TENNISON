@@ -1,0 +1,18 @@
+collectors:
+  ipfix:
+    - {subtype: ipfix, port: 4739}
+    - {subtype: prefix, port: 4740}
+    - {subtype: interfix, port: 4741}
+  snort:
+    - {port: 8081}
+ipc_path: ipc://mervyn_coord
+key: examples/mervyn.key
+cert: examples/mervyn.crt
+mongodb:
+  uri: mongodb://localhost:27017/
+  database: mervyn_coord
+  ttl: 600
+snort:
+  uri: 192.168.100.2:8082
+onos:
+  uri: 127.0.0.1:8181

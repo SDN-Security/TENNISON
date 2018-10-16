@@ -1,0 +1,17 @@
+snort:
+  rule_config: /etc/snort/rules/local.rules
+  base_rule_config: /etc/snort/rules/rules.tmpl
+  interface: snort_bridge
+
+truffle:
+  address: '0.0.0.0'
+  port: 8082
+
+pigrelay:
+  controller:
+    address: 127.0.0.1
+    port: 54321
+  alert_server:
+    address: http://192.168.100.1
+    port: 8081
+  socket_file: "/tmp/snort_alert"

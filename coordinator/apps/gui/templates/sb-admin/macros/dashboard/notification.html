@@ -1,0 +1,17 @@
+{% macro notification(title, list) %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <i class="fa fa-bell fa-fw"></i> {{title}}
+    </div>
+    <div class="panel-body">
+        <div class="list-group">
+            <a href="#" class="list-group-item">
+                <i class="fa fa-warning fa-fw"></i> DDoS Prevented
+                <span class="pull-right text-muted small"><em>4 minutes ago</em>
+                </span>
+            </a>
+        </div>
+    </div>
+    <!-- /.panel-body -->
+</div>
+{% endmacro %}

@@ -1,0 +1,153 @@
+<!-- extend base layout -->
+
+{% extends "sb-admin/master.html" %}
+{% from "sb-admin/macros/dashboard/counticon.html" import count_icon %}
+
+{% block body %}
+
+<div class="row">
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<a data-toggle="collapse" href="#security">Overview</a>
+		</div>
+
+		<div class="panel-body" id="security">
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				{{count_icon("0 %", "RAM Usage", "hdd-o", "green", "#")}}
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				{{count_icon(0, "Alerts", "warning", "red", "#")}}
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-12">
+				{{count_icon(admin_view.flows, "Flows", "dashboard", "green", "#")}}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+
+
+        <div class="col-lg-6">
+
+                <canvas id="destChart"></canvas>
+        </div>
+
+        <div class="col-lg-6">
+
+                <canvas id="portChart"></canvas>
+        </div>
+
+</div>
+{% endblock %}
+
+{% block tail %}
+<script src="/dist/js/ChartData.js"></script>
+<script src="../../bower_components/chart.js/dist/Chart.min.js"></script>
+<script>
+$(document).ready(function() {
+    var di = [];
+    var data =  [{% for row in admin_view.dest_report %}
+               [{% for item in row %}
+                "{{item}}",
+                {% endfor %}],
+                {% endfor %}];
+
+    var host = new HostSrc({{self.header}});
+
+    for(var i = 0; i < data.length; i++){
+        
+        
+        host.add(data[i][3], data[i][5]);
+
+
+
+    }
+
+
+    var destDict = host.getDestDict();
+    var dests = [];
+    var vals = [];
+    for(var key in destDict){
+	dests.push(key);
+	vals.push(destDict[key]);
+    }
+    console.log(dests, vals);
+
+    
+    
+
+
+
+
+
+var ctx = document.getElementById("destChart");
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: dests,
+        datasets: [{
+            label: '# of flows to destination',
+            data: vals,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+	    borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',       
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+	    borderWidth: 1
+            }]
+             },
+    options: {
+        
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+});
+</script>
+
+{% endblock %}

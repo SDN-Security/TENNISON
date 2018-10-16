@@ -1,0 +1,3 @@
+px import iperfs
+px reload(iperfs)
+px iperfs.run(net)

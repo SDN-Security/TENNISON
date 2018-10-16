@@ -1,0 +1,11 @@
+{
+    "default_app" : false,
+    "meta_tennison_ip" : "192.168.123.5",
+    "meta_tennison_port" : "8909",
+    "data_polling_interval" : 10,
+    "port_sharing" : true,
+    "snort_alert_sharing": true,
+    "flow_sharing": true,
+    "throughput_sharing": true,
+    "topology_sharing": true
+}

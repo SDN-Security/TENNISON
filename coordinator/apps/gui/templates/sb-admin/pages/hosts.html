@@ -1,0 +1,28 @@
+<!-- extend base layout -->
+{% extends "sb-admin/master.html" %}
+{% from "sb-admin/macros/dashboard/counticon.html" import count_icon %}
+{% from "sb-admin/macros/ui/panels/well.html" import well %}
+{% block body %}
+
+
+<div class="row">
+{% for item in admin_view.hosts %}
+
+	<div class="col-lg-4">
+		{{well("", item, "More information")}}
+	</div>
+
+{% endfor %}
+</div>
+{% endblock %}
+{% block tail %}
+
+
+<script>
+
+
+</script>
+
+
+
+{% endblock %}

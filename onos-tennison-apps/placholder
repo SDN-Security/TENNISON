@@ -1,0 +1,3 @@
+Shared directory to make Java dev easier.
+
+Within the VM copy onos-mervyn-apps to onos-mervyn-apps-sync and then develop here externally.

@@ -1,0 +1,8 @@
+ipfix:
+  - {priority: 10, subtype: ipfix, treatment: snort_mirror, fields: {sourceIPv4Address: 10.0.0.1}, metric: total_bps, threshold:  1}
+  - {priority: 10, subtype: ipfix, treatment: snort_mirror, fields: {sourceIPv4Address: 10.0.0.2}, interval: 10, metric: delta_bps, threshold: 10000}
+  - {priority: 20, subtype: prefix, treatment: snort_mirror, fields: {sourceIPv4Address: 10.0.0.3}}
+snort:
+  - {rule: 'alert tcp any any -> any any', priority: 40, treatment: block, fields: {sourceIPv4Address: 10.0.0.2, protocolIdentifier: udp}}
+  - {rule: 'alert icmp 10.0.0.3/32 any -> 10.0.0.7/32 any', priority: 10, treatment: block, fields: {sourceIPv4Address: 10.0.0.3, destinationIPv4Address: 10.0.0.7}}
+  - {rule: 'alert icmp 10.0.0.3/32 any -> 10.0.0.2/32 any', priority: 10, treatment: block, fields: {sourceIPv4Address: 10.0.0.3, destinationIPv4Address: 10.0.0.2}}

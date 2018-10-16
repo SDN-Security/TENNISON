@@ -1,0 +1,6 @@
+{
+    "default_app" : false,
+    "port_threshold_count": 2, 
+    "distributed_threshold_count": 20, 
+    "whitelisted_ports":[22]
+}
