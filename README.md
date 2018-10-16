@@ -3,18 +3,17 @@
 <p align="center">
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_logo.png?raw=true" alt="TENNISON logo" />
 </p>
-TENNISON is a network security framework that harnesses Software Defined Networks. This has been published in JSAC.
+
+TENNISON is a network security framework that harnesses the power of Software Defined Networks. For more details of this work, please see our recently published article in the IEEE Journal on Selected Areas in Communications:
 
 ```
-Fawcett, Lyndon, et al.
+Lyndon Fawcett, Sandra Scott-Hayward, Matthew Broadbent, Andrew Wright and Nicholas Race
 "TENNISON: A Distributed SDN Framework for Scalable Network Security."
 IEEE Journal on Selected Areas in Communications (2018).
 ```
+The article is available here: http://eprints.lancs.ac.uk/127188/1/tennison_CA.pdf
 
-Article is available here: http://eprints.lancs.ac.uk/127188/1/tennison_CA.pdf
-
-
-TENNISON's KSPs:
+TENNISON offers the following:
 * Extensibility
 * Holistic view
 * Rapid reaction
@@ -22,21 +21,25 @@ TENNISON's KSPs:
 * Kill chain detection support
 * Legacy network support
 
-TENNISON requires multiple components to function correctly. Below shows an
-overview of the system architecture.
-
+TENNISON requires multiple components to function correctly. Below shows an overview of the system architecture:
 
 <p align="center">
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_overview.png?raw=true" alt="TENNISON Overview" />
 </p>
 
-
-
-Please contact Lyndon at l.fawcett1@lancaster.ac.uk about any questions on TENNISON.
+To get in contact with the project, please contact Lyndon at: l.fawcett1@lancaster.ac.uk.
 
 # License
 TENNISON is licensed under the Apache 2 license and is covered by [Crown Copyright](https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/).
 
+# Contributors
+* [Lyndon Fawcett](https://github.com/lyndon160)
+* [Jamie Bird](https://github.com/biirdy)
+* Sandra Scott-Hayward
+* Andrew Wright
+* [Matthew Broadbent](https://github.com/broadbent)
+* [Richard Withnell](https://github.com/RichardWithnell)
+* [Nicholas Race](https://github.com/nickrace)
 
 # Getting started
 **Details on getting started with TENNISON are available in docs/developer_guide.pdf**
