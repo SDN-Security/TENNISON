@@ -3,9 +3,15 @@
 <p align="center">
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_logo.png?raw=true" alt="TENNISON logo" />
 </p>
-TENNISON is a network security framework that harnesses Software Defined Networks.
+TENNISON is a network security framework that harnesses Software Defined Networks. This has been published in JSAC.
 
-Please contact Lyndon at l.fawcett1@lancaster.ac.uk about any questions on TENNISON.
+```
+Fawcett, Lyndon, et al.
+"TENNISON: A Distributed SDN Framework for Scalable Network Security."
+IEEE Journal on Selected Areas in Communications (2018).
+```
+
+Article is available here: http://eprints.lancs.ac.uk/127188/1/tennison_CA.pdf
 
 
 TENNISON's KSPs:
