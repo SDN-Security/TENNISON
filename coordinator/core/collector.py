@@ -13,9 +13,9 @@ import datetime
 import sys
 
 # FIXME Fix for unpickling object scope
-sys.path.append('/home/lyndon/coordinator/mervyn/')
+sys.path.append('/home/ubuntu/TENNISON/coordinator/core/')
 # also FIXME : For when starting from a non-relative path
-sys.path.append('/home/lyndon/pig-relay/')
+sys.path.append('/home/ubuntu/TENNISON/pig-relay/')
 import alert
 
 from scapy.layers.inet import Ether, IP

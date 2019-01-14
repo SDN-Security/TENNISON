@@ -130,7 +130,7 @@ def updateNodeIPs( env, nodes ):
     return env
 
 
-tarDefaultPath = 'buck-out/gen/tools/package/onos-package/onos.tar.gz'
+tarDefaultPath = 'bazel-bin/onos.tar.gz'
 
 def unpackONOS( destDir='/tmp', run=quietRun ):
     "Unpack ONOS and return its location"

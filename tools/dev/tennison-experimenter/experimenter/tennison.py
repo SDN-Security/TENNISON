@@ -4,7 +4,7 @@ from mininet.util import quietRun, specialClass
 import subprocess
 from mininet.log import setLogLevel, info, warn, error, debug
 import os
-TennisonStaticInstallDir = '/home/lyndon/tennison/coordinator'
+TennisonStaticInstallDir = '/home/ubuntu/TENNISON/coordinator'
 MongoStaticInstallDir = '/opt/mongodb'
 TennisonRunCmd = 'tennison.py -c coordinator/examples/config_cluster.yaml -t coordinator/examples/thresholds.yaml'
 MongodbRunCmd = 'mongodb/bin/mongod --dbpath db'
