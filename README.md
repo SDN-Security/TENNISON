@@ -26,13 +26,13 @@ TENNISON offers the following:
 TENNISON requires multiple components to function correctly. Below shows an overview of the system architecture:
 
 <p align="center">
-  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_overview.png?raw=true" alt="TENNISON Overview" />
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/new_arch_grey_compact.png?raw=true" alt="TENNISON Overview" width="600">
 </p>
 
 In order to rapidly experiment with TENNISON, an testing harness is available:
 
 <p align="center">
-  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/experimenter.png?raw=true" alt="TENNISON Experimenter design" />
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/experimenter.png?raw=true" alt="TENNISON Experimenter design" width="600" />
 </p>
 
 To get in contact about the project, please contact Lyndon at: l.fawcett1@lancaster.ac.uk.
@@ -92,7 +92,7 @@ application.
 
 ## TENNISON Experimenter
 <p align="center">
-  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_experimenter.png?raw=true" alt="TENNISON Experimenter" />
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_experimenter.png?raw=true" alt="TENNISON Experimenter" width="600" />
 </p>
 
 
@@ -100,11 +100,11 @@ application.
 
 ## TENNISON GUI
 <p align="center">
-  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_gui.png?raw=true" alt="TENNISON Flows" />
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_gui.png?raw=true" alt="TENNISON Flows" width="600" />
 </p>
 
 
 <p align="center">
-  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/topo_gui.png?raw=true" alt="TENNISON topology" />
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/topo_gui.png?raw=true" alt="TENNISON topology" width="600" />
 </p>
 
