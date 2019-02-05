@@ -83,6 +83,8 @@ are wrapped in the *"tennison_experimenter"*
 application.
 
 # Screenshots from GUI and Experimenter
+
+## TENNISON Experimenter
 <p align="center">
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_experimenter.png?raw=true" alt="TENNISON Experimenter" />
 </p>
@@ -91,6 +93,8 @@ application.
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/experimenter.png?raw=true" alt="TENNISON Experimenter design" />
 </p>
 
+
+## TENNISON GUI
 <p align="center">
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_gui.png?raw=true" alt="TENNISON Flows" />
 </p>
