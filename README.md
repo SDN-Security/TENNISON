@@ -92,7 +92,7 @@ application.
 </p>
 
 <p align="center">
-  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_experimenter.png?raw=true" alt="TENNISON Experimenter" />
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_gui.png?raw=true" alt="TENNISON Flows" />
 </p>
 
 
