@@ -29,7 +29,7 @@ TENNISON requires multiple components to function correctly. Below shows an over
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/new_arch_grey_compact.png?raw=true" alt="TENNISON Overview" width="600">
 </p>
 
-In order to rapidly experiment with TENNISON, an testing harness is available:
+As TENNISON is made of many components and is designed to work at scale, testing it can be challenging. The TENNISON testing harness automates the process in varifying functional and non-functional performance before deploying a change to production:
 
 <p align="center">
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/experimenter.png?raw=true" alt="TENNISON Experimenter design" width="600" />
