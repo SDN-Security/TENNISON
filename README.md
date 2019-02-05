@@ -88,7 +88,7 @@ application.
 </p>
 
 <p align="center">
-  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_experimenter.png?raw=true" alt="TENNISON Experimenter design" />
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/experimenter.png?raw=true" alt="TENNISON Experimenter design" />
 </p>
 
 <p align="center">
@@ -97,6 +97,6 @@ application.
 
 
 <p align="center">
-  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_gui.png?raw=true" alt="TENNISON topology" />
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/topo_gui.png?raw=true" alt="TENNISON topology" />
 </p>
 
