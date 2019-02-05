@@ -81,3 +81,22 @@ This directory provides scripts to automate the testing and deployment of
 TENNISON, reducing the learning curve to working with TENNISON. Most of these
 are wrapped in the *"tennison_experimenter"*
 application.
+
+# Screenshots from GUI and Experimenter
+<p align="center">
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_experimenter.png?raw=true" alt="TENNISON Experimenter" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_experimenter.png?raw=true" alt="TENNISON Experimenter design" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_experimenter.png?raw=true" alt="TENNISON Experimenter" />
+</p>
+
+
+<p align="center">
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_gui.png?raw=true" alt="TENNISON topology" />
+</p>
+
