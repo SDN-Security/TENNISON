@@ -29,6 +29,12 @@ TENNISON requires multiple components to function correctly. Below shows an over
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_overview.png?raw=true" alt="TENNISON Overview" />
 </p>
 
+In order to rapidly experiment with TENNISON, an testing harness is available:
+
+<p align="center">
+  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/experimenter.png?raw=true" alt="TENNISON Experimenter design" />
+</p>
+
 To get in contact about the project, please contact Lyndon at: l.fawcett1@lancaster.ac.uk.
 
 # License
@@ -89,9 +95,7 @@ application.
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/tennison_experimenter.png?raw=true" alt="TENNISON Experimenter" />
 </p>
 
-<p align="center">
-  <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/experimenter.png?raw=true" alt="TENNISON Experimenter design" />
-</p>
+
 
 
 ## TENNISON GUI
