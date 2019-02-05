@@ -1,0 +1,12 @@
+flows:
+    - {destinationIPv4Address: 10.0.0.5, dstPort:21}
+    - {destinationIPv4Address: 10.0.0.2, dstPort:80}
+    - {destinationIPv4Address: 10.0.0.2, dstPort:8080}
+    - {destinationIPv4Address: 10.0.0.6, dstPort:9111}
+    - {destinationIPv4Address: 10.0.0.9, dstPort:8000}
+    - {destinationIPv4Address: 10.0.255.2, dstPort:42}
+    - {destinationIPv4Address: 10.0.39.4, dstPort:22}
+    - {destinationIPv4Address: 10.0.0.5, dstPort:22}
+    - {destinationIPv4Address: 10.0.0.5, dstPort:211}
+    - {destinationIPv4Address: 10.0.0.5, dstPort:80}
+    - {destinationIPv4Address: 10.0.0.5, dstPort:80}
