@@ -35,7 +35,7 @@ As TENNISON is made of many components and is designed to work at scale, testing
   <img src="https://github.com/SDN-Security/TENNISON/blob/master/imgs/experimenter.png?raw=true" alt="TENNISON Experimenter design" width="600" />
 </p>
 
-To get in contact about the project, please contact Lyndon at: l.fawcett1@lancaster.ac.uk.
+To get in contact about the project, please contact Lyndon at: lyndonfawcett@hotmail.com.
 
 # License
 TENNISON is licensed under the Apache 2 license and is covered by [Crown Copyright](https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/copyright-and-re-use/crown-copyright/).
