@@ -1,6 +1,12 @@
 # TENNISON Experimenter
 
 
-After ensuring that ONOS version 1.8 to 1.11 with the TENNISON apps is installed run:
+
+Make sure that ONOS 1.11 is present on the system and in the format that the ONOS.py script is expecting.
+
+Point the script to your ONOS installation by editing lines 174-178
+
+After ensuring that ONOS version 1.11 (newer versions may also be supported) is installed run:
 
 ```./tennison_experimenter.sh```
+
