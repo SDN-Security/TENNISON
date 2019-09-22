@@ -1,9 +1,6 @@
-This directory contains examples of using onos.py.
-
-You run them directly as Python scripts:
-
-    sudo ./multicluster.py
+# TENNISON Experimenter
 
 
-multicluster.py: creates two ONOS controller clusters, each of
-                 which controls a separate segment of the data network.
+After ensuring that ONOS version 1.8 to 1.11 with the TENNISON apps is installed run:
+
+```./tennison_experimenter.sh```
