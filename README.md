@@ -52,6 +52,8 @@ TENNISON is licensed under the Apache 2 license and is covered by [Crown Copyrig
 # Getting started
 **Details on getting started with TENNISON are available in docs/developer_guide.pdf**
 
+Please note that the document is out of date in places. Please make a github issue if there is anything you need help with.
+
 ---------------
 This repository is laid out as follows:
 
