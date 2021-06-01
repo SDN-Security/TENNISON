@@ -24,7 +24,7 @@ python-socketio==1.8.0
 requests==2.18.4
 scapy==2.2.0
 six==1.10.0
-urllib3==1.22
+urllib3==1.26.5
 vboxapi==1.0
 Werkzeug==0.12.2
 wrapt==1.8.0
