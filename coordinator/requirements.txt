@@ -10,5 +10,5 @@ pyzmq==15.2.0
 requests==2.9.1
 Werkzeug==0.11.3
 netaddr==0.7.19
-flask_cors==3.0.2
+flask_cors==3.0.9
 scapy-python3==0.20
