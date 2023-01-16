@@ -9,7 +9,7 @@ Flask-SocketIO==2.9.2
 idna==2.6
 iotop==0.6
 itsdangerous==0.24
-Jinja2==2.9.6
+Jinja2==2.11.3
 lazy-object-proxy==1.2.1
 logilab-common==1.1.0
 MarkupSafe==1.0
